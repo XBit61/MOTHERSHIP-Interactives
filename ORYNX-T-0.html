@@ -15,7 +15,13 @@
     font-family: "VT323", monospace;
     font-size: 30px;
     line-height: 1.2;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Password Login" tags="" position="800,500" size="100,100">&#39;&#39;Enter Password&#39;&#39;
+}
+
+tw-icon[title="Undo"],
+tw-icon[title="Redo"] {
+    display: none !important;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Password Login" tags="" position="800,500" size="100,100">&#39;&#39;Enter Password&#39;&#39;
 
 (set: $password to &quot;&quot;)
 
@@ -67,7 +73,9 @@
 	]
 ]</tw-passagedata><tw-passagedata pid="4" name="Access Denied" tags="" position="900,700" size="100,100">Access Denied
 
-Input incorrect. Return and try again.</tw-passagedata><tw-passagedata pid="5" name="Run Ship Diagnostic" tags="" position="1400,300" size="100,100">-----------------------------------------------
+Input incorrect. Try again.
+
+(link-goto: &quot;← Try Again&quot;, &quot;Password Login&quot;)</tw-passagedata><tw-passagedata pid="5" name="Run Ship Diagnostic" tags="" position="1400,300" size="100,100">-----------------------------------------------
 &#39;&#39;Running Diagnostic Check...&#39;&#39;
 -----------------------------------------------
 Do not leave this screen until Diagnostic is complete, the process will restart.
@@ -75,7 +83,9 @@ Do not leave this screen until Diagnostic is complete, the process will restart.
 (live: 120s)[
 	(stop:)
 	Diagnostic Complete. (Ask Warden what they are)
-]</tw-passagedata><tw-passagedata pid="6" name="Terms of Use" tags="" position="1400,700" size="100,100">-----------------------------------------------
+]
+
+(link-goto: &quot;← Return&quot;, &quot;Home Page&quot;)</tw-passagedata><tw-passagedata pid="6" name="Terms of Use" tags="" position="1400,700" size="100,100">-----------------------------------------------
 &#39;&#39;Terms of Use&#39;&#39;
 -----------------------------------------------
 
@@ -86,7 +96,8 @@ Following Terms and Laws must be followed for legal use:-
 &#39;&#39;Law of Travel.&#39;&#39; Ships must pay the required fees in order to enter certain areas/belts/systems/etc. Ships must also abstain from entering areas/belts/systems/etc. that do not allow the ship&#39;s type.
 &#39;&#39;Law of Combat.&#39;&#39; Ships may not get into violent altercations within areas/belts/systems/etc. that do not allow such.
 &#39;&#39;Law of Salvage.&#39;&#39; Abandoned Ships may be salvaged for close to, or equal to, to the value of the ship itself. This value does not include any installments.
-&#39;&#39;&#39;&#39;Bold Text&#39;&#39;&#39;&#39;</tw-passagedata><tw-passagedata pid="7" name="System Information" tags="" position="1400,900" size="100,100">-----------------------------------------------
+
+(link-goto: &quot;← Return&quot;, &quot;Home Page&quot;)</tw-passagedata><tw-passagedata pid="7" name="System Information" tags="" position="1400,900" size="100,100">-----------------------------------------------
 &#39;&#39;System Information&#39;&#39;
 -----------------------------------------------
 
@@ -98,7 +109,10 @@ Hardpoints: 2
 Jump Rating: 1
 Class: 1
 Max Capacity: 14 Persons
-Max Fuel Capacity: 12 Fuel Units</tw-passagedata><tw-passagedata pid="8" name="Prompt Commands" tags="" position="1400,100" size="100,100">-----------------------------------------------
+Max Fuel Capacity: 12 Fuel Units
+
+(link-goto: &quot;← Return&quot;, &quot;Home Page&quot;)
+</tw-passagedata><tw-passagedata pid="8" name="Prompt Commands" tags="" position="1400,100" size="100,100">-----------------------------------------------
 &#39;&#39;Enter Text Prompt and wait for computer response&#39;&#39;
 -----------------------------------------------
 
@@ -120,7 +134,9 @@ RESPONSE COMPLETE.
 ]
 ]
 
-|result&gt;[]</tw-passagedata><tw-passagedata pid="9" name="Cargo" tags="" position="1400,500" size="100,100">-----------------------------------------------
+|result&gt;[]
+
+(link-goto: &quot;← Return&quot;, &quot;Home Page&quot;)</tw-passagedata><tw-passagedata pid="9" name="Cargo" tags="" position="1400,500" size="100,100">-----------------------------------------------
 &#39;&#39;Cargo&#39;&#39;
 -----------------------------------------------
 
@@ -140,7 +156,9 @@ Cargo Check complete. (Ask Warden)
 	]
 ]
 
-|result&gt;[]</tw-passagedata></tw-storydata>
+|result&gt;[]
+
+(link-goto: &quot;← Return&quot;, &quot;Home Page&quot;)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
